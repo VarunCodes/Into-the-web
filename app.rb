@@ -23,5 +23,6 @@ get '/older' do
 end
 
 get '/cat' do
+  @sample = ["Amigo", "Oscar", "Viking"].sample
   erb(:index)
 end
