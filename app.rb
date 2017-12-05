@@ -22,7 +22,13 @@ get '/older' do
   "puts something new"
 end
 
-get '/cat' do
-  @sample = ["Amigo", "Oscar", "Viking"].sample
+get '/named-cat' do
+  p params
+  @name = params[:name]
+  erb(:index)
+end
+
+get '/random-cat' do
+  @name = ["Amigo", "Oscar", "Viking"].sample
   erb(:index)
 end
